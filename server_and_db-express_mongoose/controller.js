@@ -1,9 +1,8 @@
-const Model = require('./schemas/');
+const Model = require('./model/modelName');
 
-exports.getEntireCollection = async (req, res) => {
+exports.get = async (req, res) => {
   try {
-    //  mongoose / mongo methids return 
-    const retrieved = await Model.find().sort({ score: -1});
+    const retrieved = await Model.getEntireCollection();
     res.status(200);
     res.send(retrieved);
   } catch(err){
@@ -12,10 +11,10 @@ exports.getEntireCollection = async (req, res) => {
   }
 }
 
-exports.UpdateIncrement = async (req, res) => {
+exports.increment = async (req, res) => {
   try {
     const id = req.params.id;
-    const updated = await Model.findByIdAndUpdate(id, { $inc: { score : 1} }, { new: true});
+    const updated = await Model.UpdateIncrement(id);
     res.status(200);
     res.send(updated);
   } catch (err) {
@@ -24,10 +23,10 @@ exports.UpdateIncrement = async (req, res) => {
   }
 }
 
-exports.UpdateDecrement = async (req, res~) => {
+exports.decrement = async (req, res) => {
   try {
     const id = req.params.id;
-    const updated = await Model.findByIdAndUpdate(id, { $inc: { score : -1 } }, { new: true});
+    const updated = await Model.UpdateDecrement(id);
     res.status(200);
     res.send(updated);
   } catch (err) {
@@ -36,10 +35,10 @@ exports.UpdateDecrement = async (req, res~) => {
   }
 }
 
-exports.deleteDocument = async (req, res) => {
+exports.delete = async (req, res) => {
   try {
     const id = req.params.id;
-    await Model.findByIdAndDelete(id);
+    await Model.deleteDocument(id);
     res.status(204);
     res.send();
   } catch (err) {
@@ -49,10 +48,10 @@ exports.deleteDocument = async (req, res) => {
 }
 
 
-exports.addDocument = async (req, res) => {
+exports.post = async (req, res) => {
   try {
     const payload = req.body;
-    const added = await Model.create(payload);
+    const added = await Model.addDocument(payload);
     res.status(201);
     res.send(added);
   } catch (err) {

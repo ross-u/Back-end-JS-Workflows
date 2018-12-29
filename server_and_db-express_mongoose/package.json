@@ -1,0 +1,21 @@
+{
+  "name": "server_db-express_mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "controller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Uros Cirkovic",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-plugin-json": "^1.3.2",
+    "nodemon": "^1.18.9"
+  }
+}
