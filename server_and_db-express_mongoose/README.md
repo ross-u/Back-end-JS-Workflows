@@ -1,6 +1,16 @@
 # Mongoose and Express - Workflow 
 
-
+📦server_and_db-express_mongoose
+ ┣ 📂model
+ ┃ ┗ 📜modelName.js
+ ┣ 📂schemas
+ ┃ ┗ 📜schemaName.js
+ ┣ 📜README.md
+ ┣ 📜config.js
+ ┣ 📜controller.js
+ ┣ 📜db.js
+ ┣ 📜express.index.js
+ ┗ 📜router.js
 
 ## Install Dependencies
 
