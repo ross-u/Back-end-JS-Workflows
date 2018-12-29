@@ -1,6 +1,5 @@
 const modelName = require('./../schemas/schemaName');
 
-
 const getEntireCollection = (a) => {
   return modelName.find().sort({ score: -1 });
 }
@@ -16,7 +15,6 @@ const UpdateDecrement = (id) => {
 const deleteDocument = (id) => {
   return modelName.findByIdAndDelete(id);
 }
-
 
 const addDocument = (payload) => {
   return modelName.create(payload);

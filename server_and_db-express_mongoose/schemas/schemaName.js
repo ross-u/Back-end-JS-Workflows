@@ -1,4 +1,4 @@
- const mongoose = require('../db');
+const mongoose = require('../db');
 
 const Schema = mongoose.Schema;
 
@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
   If no collection, MongoDB will create one after inserting the first document */
 const nameOfTheSchema = new Schema(
   {
-    // an example of json Schema with different data type use cases
+    // an example of Schema with different data type use cases
     title: { type: String, default: '' },
     content: { type: String, default: '' },
     score: { type: Number, default: 0 },
