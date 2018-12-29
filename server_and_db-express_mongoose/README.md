@@ -5,18 +5,23 @@
 ## File Tree Overview
 
 ```js
-📦server_and_db-express_mongoose
-┣ 📂model
-┃ ┗ 📜modelName.js
+📂server_and_db-express_mongoose
+┣ 📂 model
+┃ ┗ 📄modelName.js
 ┣ 📂schemas
-┃ ┗ 📜schemaName.js
-┣ 📜README.md
-┣ 📜config.js
-┣ 📜controller.js
-┣ 📜db.js
-┣ 📜express.index.js
-┗ 📜router.js
+┃ ┗ 📄schemaName.js
+┃
+┣ 📄README.md
+┣ 📄config.js
+┣ 📄controller.js
+┣ 📄db.js
+┣ 📄express.index.js
+┗ 📄router.js
 ```
+
+____
+
+____
 
 
 
@@ -30,13 +35,19 @@ npm i express cors mongoose
 npm i -save-dev nodemon eslint eslint-plugin-json
 ```
 
+____
+
+____
+
 
 
 
 
 ## Setup Express
 
-`index.js ` 
+
+
+**`index.js`** 
 
 - import `express` module;
 - import the `./config.js` and `./router.js` files
@@ -63,9 +74,15 @@ app.listen(PORT, () => {
 });
 ```
 
+____
+
+____
 
 
-`router.js ` 
+
+
+
+**`router.js`** 
 
 - instantiate the `express.Router()`.
 - import the Node's `fs` module ,     `./config.js`    and     `./router.js`  files.
@@ -107,7 +124,13 @@ module.exports = router;
 
 
 
-`config.js ` 
+____
+
+____
+
+
+
+**`config.js`**  
 
 ```javascript
 // config.js
@@ -122,11 +145,11 @@ module.exports = { dbUrl, dbName, URI, PORT };
 
 
 
-
-
 ____
 
+___
 
+____
 
 
 
@@ -156,11 +179,17 @@ mongoose.connect(`mongodb://localhost/${dbName}`, (err) => {
 module.exports = mongoose;
 ```
 
+____
+
+____
+
 
 
 
 
 ## Create Schema & export the Model
+
+
 
 `schemas/schemaName.js`
 
@@ -199,16 +228,31 @@ Note: Mongoose automatically looks for the plural version of given name for the 
 module.exports = modelName;
 ```
 
+____
+
+____
+
 
 
 
 
 ## Create Query Methods
 
+**`./models/modelName.js`**
+
+* Import the `Model` instance from the previously created schema script.
+* Create functions that return the result from querying the database through the model methods.
+* More information on **Mongoose Model** - https://mongoosejs.com/docs/models.html
+
 ```javascript
+//  ./models/modelName.js
+
+// Import the Model instance
+// Model instance has DB querying methods. 
 const modelName = require('./../schemas/schemaName');
 
 const getEntireCollection = (a) => {
+  // return entire collection, sorted
   return modelName.find().sort({ score: -1 });
 }
 
@@ -239,17 +283,29 @@ module.exports = {
 
 
 
+____
+
+____
+
+____
+
+
+
 ## Configure the Controller
+
+
 
 `./controller.js`
 
-- We can import the model and it's `index.js` file that has a reference to all the model files  by requiring only the folder path  `./models/`,  **or** 
+- We can import the model and it's `index.js` file that has a reference to all the Model `js` scripts  by requiring only the folder path  `./models/`,  **or** 
 
-- import the specific `./models/modelName` script .
+  - import the specific `./models/modelName` script .
 
 - The `req` or `res` objects that are implicitly (by default) passed from the `router`,  are available in the `controller.js` methods.
 
 - Use `async/await` for handling the asynchronous database queries done by the `Model` methods. 
+
+- 
 
   ```javascript
   const Model = require('./models/modelName');
