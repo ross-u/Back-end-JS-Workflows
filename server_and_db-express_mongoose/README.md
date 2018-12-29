@@ -36,7 +36,7 @@ npm i -save-dev nodemon eslint eslint-plugin-json
 
 ## Setup Express
 
-## `index.js ` 
+`index.js ` 
 
 - import `express` module;
 - import the `./config.js` and `./router.js` files
@@ -65,7 +65,7 @@ app.listen(PORT, () => {
 
 
 
-## `router.js ` 
+`router.js ` 
 
 - instantiate the `express.Router()`.
 - import the Node's `fs` module ,     `./config.js`    and     `./router.js`  files.
@@ -107,7 +107,7 @@ module.exports = router;
 
 
 
-## `config.js ` 
+`config.js ` 
 
 ```javascript
 // config.js
@@ -132,7 +132,7 @@ ____
 
 ## Connect  to the MongoDB
 
-## `db.js`
+`db.js`
 
 * Import the `mongoose` module 
 * Create the connection to the database using Mongoose.
@@ -162,7 +162,7 @@ module.exports = mongoose;
 
 ## Create Schema & export the Model
 
-## `schemas/schemaName.js`
+`schemas/schemaName.js`
 
 - Import the `db` module .
 - Create the Schema for your collection using `mongoose.Schema` constructor.
@@ -241,7 +241,7 @@ module.exports = {
 
 ## Configure the Controller
 
-## `./controller.js`
+`./controller.js`
 
 - We can import the model and it's `index.js` file that has a reference to all the model files  by requiring only the folder path  `./models/`,  **or** 
 
