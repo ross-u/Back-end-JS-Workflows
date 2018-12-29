@@ -26,4 +26,4 @@ module.exports = {
   UpdateDecrement,
   deleteDocument,
   addDocument
-};
+};s

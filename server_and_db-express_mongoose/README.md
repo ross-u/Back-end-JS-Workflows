@@ -8,12 +8,10 @@
 
 ```js
 📂server_and_db-express_mongoose
-┣ 📂 model
+┣ 📂 models
 ┃ ┗ 📄modelName.js
 ┣ 📂schemas
 ┃ ┗ 📄schemaName.js
-┃
-┣ 📄README.md
 ┣ 📄config.js
 ┣ 📄controller.js
 ┣ 📄db.js
@@ -285,7 +283,6 @@ module.exports = {
 
 - Use `async/await` for handling the asynchronous database queries done by the `Model` methods. 
 
-- 
 
   ```javascript
   const Model = require('./models/modelName');
