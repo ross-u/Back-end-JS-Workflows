@@ -70,10 +70,6 @@ app.listen(PORT, () => {
 
 <br>
 
-____
-
-
-
 **`router.js`** 
 
 - instantiate the `express.Router()`.
@@ -116,8 +112,6 @@ module.exports = router;
 
 <br>
 
-____
-
 
 
 **`config.js`**  
@@ -147,8 +141,6 @@ ____
 
 ## Connect  to the MongoDB
 
-<br>
-
 `db.js`
 
 * Import the `mongoose` module 
@@ -177,7 +169,7 @@ module.exports = mongoose;
 
 <br>
 
-<br>
+
 
 ## Create Schema & export the Model
 
@@ -224,7 +216,7 @@ module.exports = modelName;
 
 <br>
 
-<br>
+
 
 
 
@@ -274,8 +266,6 @@ module.exports = {
 ```
 
 
-
-<br>
 
 <br>
 
