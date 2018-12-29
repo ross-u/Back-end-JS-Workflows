@@ -21,11 +21,9 @@
 ┗ 📄router.js
 ```
 
-____
+<br>
 
-____
-
-
+<br>
 
 
 
@@ -37,13 +35,7 @@ npm i express cors mongoose
 npm i -save-dev nodemon eslint eslint-plugin-json
 ```
 
-____
-
-____
-
-
-
-
+<br>
 
 ## Setup Express
 
@@ -76,13 +68,7 @@ app.listen(PORT, () => {
 });
 ```
 
-____
-
-____
-
-
-
-
+<br>
 
 **`router.js`** 
 
@@ -124,11 +110,7 @@ router.get('/*', (req, res) => {
 module.exports = router;  
 ```
 
-
-
-____
-
-____
+<br>
 
 
 
@@ -153,7 +135,9 @@ ___
 
 ____
 
+<br>
 
+<br>
 
 ## Connect  to the MongoDB
 
@@ -181,11 +165,9 @@ mongoose.connect(`mongodb://localhost/${dbName}`, (err) => {
 module.exports = mongoose;
 ```
 
-____
-
-____
 
 
+<br>
 
 
 
@@ -230,9 +212,9 @@ Note: Mongoose automatically looks for the plural version of given name for the 
 module.exports = modelName;
 ```
 
-____
 
-____
+
+<br>
 
 
 
@@ -285,13 +267,9 @@ module.exports = {
 
 
 
-____
+<br>
 
-____
-
-____
-
-
+<br>
 
 ## Configure the Controller
 
