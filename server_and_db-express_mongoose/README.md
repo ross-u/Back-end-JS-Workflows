@@ -1,4 +1,4 @@
-# Mongoose and Express - Workflow 
+# Mongoose and Express - Basic Setup
 
 <br>
 
